@@ -1,0 +1,76 @@
+from colorama import Fore
+import os
+
+
+is_running = True
+
+def ask():
+    answer=input(Fore.RED + "(exit/back): ")
+    if answer == "back":
+        menu()
+    else:
+        print(Fore.RESET + "")
+        is_running = False
+
+def menu():
+    os.system("cls" if os.name == "nt" else "clear")
+    print(Fore.RED + " ██▓     ▒█████    ██████ ▄▄▄█████▓       ██▓███   ▄▄▄     ▄▄▄█████▓ ██░ ██ ")
+    print("▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒      ▓██░  ██▒▒████▄   ▓  ██▒ ▓▒▓██░ ██▒")
+    print("▒██░    ▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░      ▓██░ ██▓▒▒██  ▀█▄ ▒ ▓██░ ▒░▒██▀▀██░")
+    print("▒██░    ▒██   ██░  ▒   ██▒░ ▓██▓ ░       ▒██▄█▓▒ ▒░██▄▄▄▄██░ ▓██▓ ░ ░▓█ ░██ ")
+    print("░██████▒░ ████▓▒░▒██████▒▒  ▒██▒ ░       ▒██▒ ░  ░ ▓█   ▓██▒ ▒██▒ ░ ░▓█▒░██▓")
+    print("░ ▒░▓  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░         ▒▓▒░ ░  ░ ▒▒   ▓▒█░ ▒ ░░    ▒ ░░▒░▒")
+    print("░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░          ░▒ ░       ▒   ▒▒ ░   ░     ▒ ░▒░ ░")
+    print("  ░ ░   ░ ░ ░ ▒  ░  ░  ░    ░            ░░         ░   ▒    ░       ░  ░░ ░ ")
+    print(f"    ░  ░    ░ ░        ░                                ░  ░         ░  ░  ░ ")
+    link = input(f"Search subdomains for: {Fore.GREEN}")
+    os.system("cls" if os.name == "nt" else "clear")
+    print("General Navigation:")
+    print(f"---[{link}/]")
+    print(f"---[{link}/about]")
+    print(f"---[{link}/contact]")
+    print(f"---[{link}/faq]")
+    print(f"---[{link}/terms]")
+    print(f"---[{link}/privacy]\n")
+    print("User Accounts and Authentication:")
+    print(f"---[{link}/login]")
+    print(f"---[{link}/signup]")
+    print(f"---[{link}/logout]")
+    print(f"---[{link}/profile]")
+    print(f"---[{link}/replace_with_user_name]")
+    print(f"---[{link}/dashboard]\n")
+
+    print("Content and Resources:")
+    print(f"---[{link}/blog]")
+    print(f"---[{link}/product/replace_with_product_name]")
+    print(f"---[{link}/cart]")
+    print(f"---[{link}/checkout]")
+    print(f"---[{link}/orders]\n")
+    print("Administrative and Management:")
+    print(f"---[{link}/admin]")
+    print(f"---[{link}/settings]")
+    print(f"---[{link}/config]")
+    print(f"---[{link}/analytics]\n")
+    print("Media and Multimedia:")
+    print(f"---[{link}/gallery]")
+    print(f"---[{link}/videos]")
+    print(f"---[{link}/images]\n")
+    print("Search and Discovery:")
+    print(f"---[{link}/search]")
+    print(f"---[{link}/search?q=query]\n")
+    print("Community and Interaction:")
+    print(f"---[{link}/forum]")
+    print(f"---[{link}/community]")
+    print(f"---[{link}/discussion]\n")
+    print("Developer Resources:")
+    print(f"---[{link}/api]")
+    print(f"---[{link}/developers]")
+    print(f"---[{link}/sdks]\n")
+    print("Miscellaneous:")
+    print(f"---[{link}/sitemap]")
+    print(f"---[{link}/rss]")
+    print(f"---[{link}/jobs]")
+    print(f"---[{link}/careers]\n")
+    ask()
+menu()
+
